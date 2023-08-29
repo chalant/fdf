@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 13:42:31 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/24 13:42:31 by ychalant         ###   ########.fr       */
+/*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
+/*   Updated: 2023/08/29 15:53:50 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	key_press_hook(int code, t_fdf *fdf)
 	if (fdf->ctrl->pressed && code == MODE && fdf->mode == fdf->isometric_mode)
 		fdf->mode = fdf->perspective_mode;
 	else if (fdf->ctrl->pressed && code == MODE
-		&& fdf->mode == fdf->perspective_mode)
+			&& fdf->mode == fdf->perspective_mode)
 		fdf->mode = fdf->isometric_mode;
 	if (code == SPACE && fdf->space == fdf->view)
 		fdf->space = fdf->world;

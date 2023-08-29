@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 13:42:31 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/24 13:42:31 by ychalant         ###   ########.fr       */
+/*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
+/*   Updated: 2023/08/29 15:53:50 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ void	compute_hsl(t_hsl *hsl, t_object *object, int index)
 	mel = object->max_elevation;
 	l = object->light;
 	hsl->hue = fabs(fmod(object->base_color + object->colors[index]
-				+ (object->elevations[index]
-					* object->intensity / mel), 360.0f));
+				+ (object->elevations[index] * object->intensity / mel),
+				360.0f));
 	hsl->lightness = object->lightness * (1 - l) + l * object->lightness
-		* (object->elevations[index] + mel + object->light_base)
-		/ (2 * mel + object->light_base);
+		* (object->elevations[index] + mel + object->light_base) / (2 * mel
+			+ object->light_base);
 	hsl->saturation = object->saturation;
 }
 

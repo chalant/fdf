@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 13:59:58 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/24 13:59:58 by ychalant         ###   ########.fr       */
+/*   Created: 2023/08/29 15:54:53 by ychalant          #+#    #+#             */
+/*   Updated: 2023/08/29 15:54:53 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ typedef struct s_object
 	t_matrix		*t_center;
 	t_matrix		*rev_t_center;
 	t_matrix		*tmp;
-	
+
 	float			*elevations;
 	float			max_elevation;
 	float			min_elevation;
@@ -177,8 +177,8 @@ int					create_isometric_mode(t_fdf *fdf);
 
 int					fdf_object_color(t_object *object);
 
-void				fdf_increment_limit(float *target, float incr,
-						float low, float high);
+void				fdf_increment_limit(float *target, float incr, float low,
+						float high);
 void				fdf_draw_grid(t_fdf_mode *mode, t_display *display,
 						t_object *object, int shape[2]);
 

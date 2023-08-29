@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 13:42:31 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/24 13:42:31 by ychalant         ###   ########.fr       */
+/*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
+/*   Updated: 2023/08/29 15:53:50 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,10 +81,12 @@ void	plot_line(t_display *display, int color, t_line *line)
 			break ;
 		if (line->dx > line->dy)
 			color = fdf_gradient(compute_ratio(line->s0, line->x1, line->x0),
-					line->color0, line->color1);
+									line->color0,
+									line->color1);
 		else
 			color = fdf_gradient(compute_ratio(line->s1, line->y1, line->y0),
-					line->color0, line->color1);
+									line->color0,
+									line->color1);
 		fdf_pixel_put(display, line->x0, line->y0, color);
 		next_line_point(line);
 	}

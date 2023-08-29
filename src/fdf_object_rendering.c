@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 13:42:31 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/24 13:42:31 by ychalant         ###   ########.fr       */
+/*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
+/*   Updated: 2023/08/29 15:53:50 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ void	draw_object(t_fdf_mode *mode, t_display *display, t_object *object)
 
 	init_shape(shape);
 	ft_memset(display->addr, 0x0, display->width * display->height
-		* (display->bits_per_pixel / 8));
+			* (display->bits_per_pixel / 8));
 	fdf_draw_grid(mode, display, object, shape);
 }

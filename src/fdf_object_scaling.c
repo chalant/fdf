@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 13:42:31 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/28 14:00:05 by ychalant         ###   ########.fr       */
+/*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
+/*   Updated: 2023/08/29 15:53:50 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ void	scale_object(t_fdf *fdf, t_object *object, t_matrix *transform)
 		* transform->points[1][1];
 	width = fabs(object->body->points[0][object->body->cols - 1])
 		* transform->points[0][0];
-	if (elevation > 0.01f && elevation < 2.0f && width > 0.3f
-		&& width < 3.0f && height > 0.3f && height < 3.0f)
+	if (elevation > 0.01f && elevation < 2.0f && width > 0.3f && width < 3.0f
+		&& height > 0.3f && height < 3.0f)
 	{
 		inplace_matmul(transform, object->body, object->result);
 		inplace_matmul(transform, object->center, object->tmp);

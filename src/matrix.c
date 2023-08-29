@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 13:42:31 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/24 13:42:31 by ychalant         ###   ########.fr       */
+/*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
+/*   Updated: 2023/08/29 15:53:50 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,14 @@ t_matrix	*create_matrix(int rows, int cols, float value)
 	if (!matrix->points)
 		return (delete_matrix(matrix, 0));
 	matrix->points[0] = fdf_fill((float *)malloc(cols * sizeof(float)),
-			cols, value);
+									cols,
+									value);
 	i = 1;
 	while (matrix->points[i - 1] && i < rows)
 	{
 		matrix->points[i] = fdf_fill((float *)malloc(cols * sizeof(float)),
-				cols, value);
+										cols,
+										value);
 		i++;
 	}
 	if (!matrix->points[i - 1])

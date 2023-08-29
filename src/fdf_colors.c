@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 13:42:31 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/24 13:42:31 by ychalant         ###   ########.fr       */
+/*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
+/*   Updated: 2023/08/29 15:53:50 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,8 @@ float	fdf_color(char *point_values)
 		return (0);
 	rgb = str_to_uint(color[1], 16);
 	hsl = rgb_to_hsl((float)((rgb >> 16) & 0xFF),
-			(float)((rgb >> 8) & 0xFF), (float)(rgb & 0xFF));
+						(float)((rgb >> 8) & 0xFF),
+						(float)(rgb & 0xFF));
 	delete_strings(color);
 	return (hsl.hue);
 }
