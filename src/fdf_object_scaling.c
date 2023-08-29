@@ -6,7 +6,7 @@
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/29 15:53:50 by ychalant         ###   ########.fr       */
+/*   Updated: 2023/08/29 18:06:43 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	scale_object(t_fdf *fdf, t_object *object, t_matrix *transform)
 		inplace_matmul(transform, object->body, object->result);
 		inplace_matmul(transform, object->center, object->tmp);
 	}
-	if (elevation > 2.0f && transform->points[2][2] > 0.0f)
+	if (elevation > 2.0f && transform->points[2][2] < 1.0f)
 	{
 		inplace_matmul(transform, object->body, object->result);
 		inplace_matmul(transform, object->center, object->tmp);

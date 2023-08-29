@@ -6,7 +6,7 @@
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/29 15:53:50 by ychalant         ###   ########.fr       */
+/*   Updated: 2023/08/29 18:00:42 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,8 @@ char	*get_next_line(int fd)
 {
 	char				*line;
 	char				*tmp;
-	static t_read_state	rs;
+	static t_read_state	rs = {-1, 0, 0, 0, 0, 0, 0};
 
-	rs = {-1, 0, 0, 0, 0, 0, 0};
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
 	line = malloc(sizeof(char));
