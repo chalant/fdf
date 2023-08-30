@@ -1,4 +1,4 @@
-C_FLAGS = -Wall -Wextra -Werror
+C_FLAGS = -O3 -Wall -Wextra -Werror
 SRC_FILES = ft_printf.c\
 			apply_flags.c\
 			param_flags.c\
