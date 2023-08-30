@@ -6,7 +6,6 @@ INCLUDES_FILES = fdf.h\
 		   		 get_next_line.h\
 		         fdf_bindings.h\
 		         matrix.h\
-				 fdf_loading.h\
 				 fdf_rendering.h\
 
 SRC_FILES = fdf.c\

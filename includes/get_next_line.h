@@ -6,7 +6,7 @@
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 15:54:53 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/29 15:54:53 by ychalant         ###   ########.fr       */
+/*   Updated: 2023/08/30 14:50:43 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
+#  define BUFFER_SIZE 1024
 # endif
 
 # if BUFFER_SIZE > 1000000
 #  undef BUFFER_SIZE
-#  define BUFFER_SIZE 14096
+#  define BUFFER_SIZE 1024
 # endif
 
 typedef struct s_read_state

@@ -6,7 +6,7 @@
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 15:54:53 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/30 14:30:01 by ychalant         ###   ########.fr       */
+/*   Updated: 2023/08/30 14:45:35 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include "fdf_bindings.h"
 # include "fdf_controls.h"
-# include "fdf_loading.h"
 # include "fdf_rendering.h"
 # include "ft_printf.h"
 # include "get_next_line.h"
