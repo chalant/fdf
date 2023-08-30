@@ -6,7 +6,7 @@
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/29 15:53:50 by ychalant         ###   ########.fr       */
+/*   Updated: 2023/08/30 12:50:37 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,22 @@ int	rotation_hook(int code, t_fdf *fdf)
 {
 	if (code == RL && fdf->shift->pressed)
 		rotate_object(fdf, fdf->map, fdf->rev_rotations->z_axis,
-				fdf->rotations->z_axis);
+			fdf->rotations->z_axis);
 	else if (code == RR && fdf->shift->pressed)
 		rotate_object(fdf, fdf->map, fdf->rotations->z_axis,
-				fdf->rev_rotations->z_axis);
+			fdf->rev_rotations->z_axis);
 	else if (code == RU)
 		rotate_object(fdf, fdf->map, fdf->rev_rotations->y_axis,
-				fdf->rotations->y_axis);
+			fdf->rotations->y_axis);
 	else if (code == RL)
 		rotate_object(fdf, fdf->map, fdf->rev_rotations->x_axis,
-				fdf->rotations->x_axis);
+			fdf->rotations->x_axis);
 	else if (code == RR)
 		rotate_object(fdf, fdf->map, fdf->rotations->x_axis,
-				fdf->rev_rotations->x_axis);
+			fdf->rev_rotations->x_axis);
 	else if (code == RD)
 		rotate_object(fdf, fdf->map, fdf->rotations->y_axis,
-				fdf->rev_rotations->y_axis);
+			fdf->rev_rotations->y_axis);
 	return (1);
 }
 

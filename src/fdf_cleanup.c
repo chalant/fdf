@@ -6,7 +6,7 @@
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/29 17:59:33 by ychalant         ###   ########.fr       */
+/*   Updated: 2023/08/30 12:44:46 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,8 @@ int	fdf_free(t_fdf *fdf, int status)
 	delete_all_matrix(fdf->centering);
 	delete_all_matrix(fdf->zooming_in);
 	delete_all_matrix(fdf->zooming_out);
-	if (fdf->isometric_mode)
-		delete_mode(fdf->isometric_mode);
-	if (fdf->perspective_mode)
-		delete_mode(fdf->perspective_mode);
+	delete_mode(fdf->isometric_mode);
+	delete_mode(fdf->perspective_mode);
 	if (fdf->ctrl)
 		free(fdf->ctrl);
 	if (fdf->shift)

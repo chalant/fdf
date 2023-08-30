@@ -6,7 +6,7 @@
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/29 15:53:50 by ychalant         ###   ########.fr       */
+/*   Updated: 2023/08/30 12:51:45 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ int	scale_and_center(t_fdf *fdf, t_object *object)
 		return (0);
 	transform_object(fdf, object, scale);
 	trsl = translation(-object->center->points[0][0],
-						-object->center->points[1][0],
-						2.0f);
+			-object->center->points[1][0], 2.0f);
 	if (!trsl)
 	{
 		delete_matrix(scale, scale->rows);

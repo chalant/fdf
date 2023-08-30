@@ -6,7 +6,7 @@
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/29 15:53:50 by ychalant         ###   ########.fr       */
+/*   Updated: 2023/08/30 12:43:17 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ int	set_fdf_transforms(t_fdf *fdf)
 		return (0);
 	fdf->transforms = identity_matrix(3, 3);
 	fdf->centering = translation(fdf->display->height / 2.0f,
-									fdf->display->width / 2.0f,
-									0.0f);
+			fdf->display->width / 2.0f, 0.0f);
 	fdf->tmp = homogeneous_matrix(3, 3);
 	fdf->mode = fdf->isometric_mode;
 	return (1);
