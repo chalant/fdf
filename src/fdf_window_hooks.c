@@ -6,7 +6,7 @@
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/30 12:57:25 by ychalant         ###   ########.fr       */
+/*   Updated: 2023/08/30 14:13:22 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	close_program(t_fdf *fdf)
 {
 	fdf_free(fdf, 0);
+	system("leaks fdf");
 	exit(0);
 }
 

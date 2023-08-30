@@ -6,7 +6,7 @@
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 15:54:53 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/29 15:54:53 by ychalant         ###   ########.fr       */
+/*   Updated: 2023/08/30 14:30:01 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 # include "mlx.h"
 # include <fcntl.h>
 # include <math.h>
-# include <stdio.h> //todo: maybe remove this ?
 
 # define WORLD 0
 # define VIEW 1

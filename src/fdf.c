@@ -6,7 +6,7 @@
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/30 12:59:35 by ychalant         ###   ########.fr       */
+/*   Updated: 2023/08/30 14:06:01 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int	set_variables(t_fdf *fdf)
 	fdf->command->pressed = 0;
 	fdf->shift->pressed = 0;
 	fdf->display->height = 800;
-	fdf->display->width = 800;
+	fdf->display->width = 1000;
 	fdf->world = WORLD;
 	fdf->view = VIEW;
 	fdf->space = fdf->world;

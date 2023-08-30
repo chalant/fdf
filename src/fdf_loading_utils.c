@@ -6,7 +6,7 @@
 /*   By: ychalant <ychalant@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 15:53:50 by ychalant          #+#    #+#             */
-/*   Updated: 2023/08/29 15:53:50 by ychalant         ###   ########.fr       */
+/*   Updated: 2023/08/30 14:35:23 by ychalant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	fill_points(t_object *object, char *line, int x, int *z)
 		return (0);
 	map = object->body;
 	y = 0;
-	while (numbers[y])
+	while (*z < map->cols && numbers[y])
 	{
 		map->points[0][*z] = (float)x;
 		map->points[1][*z] = (float)y;
