@@ -23,7 +23,7 @@ int	perspective_divide(t_object *object)
 	while (++j < mat->cols)
 	{
 		w = mat->points[3][j];
-		if (fabsf(w) > 0.00001f)
+		if (fabsf(w) > 0.01f)
 		{
 			mat->points[0][j] /= w;
 			mat->points[1][j] /= w;
@@ -35,7 +35,7 @@ int	perspective_divide(t_object *object)
 
 static int	clipping_cond(float value)
 {
-	if (value > 0.0f)
+	if (value > 0.1f)
 		return (1);
 	return (0);
 }
