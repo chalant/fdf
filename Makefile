@@ -1,6 +1,8 @@
 INCLUDES_DIR = ./includes
 SRC_DIR = ./src
 OBJ_DIR = ./obj
+MLX_DIR = ./minilibx
+MLX_MAC_DIR = ./minilibx
 
 INCLUDES_FILES = fdf.h\
 		   		 get_next_line.h\
@@ -50,17 +52,27 @@ NAME = fdf
 
 FT_PRINTF_DIR = ./ft_printf
 LIBFTPRINTF = $(FT_PRINTF_DIR)/libftprintf.a
+MINILIBX = $(MLX_DIR)/libmlx_Linux.a
+MINILIBX_MAC = $(MLX_MAC_DIR)/libmlx_Linux.a
 
-C_FLAGS = -O3 -I$(INCLUDES_DIR) -I$(FT_PRINTF_DIR) -I$(SRC_DIR) -Wall -Wextra -Werror
+C_FLAGS = -O3 -I$(MLX_DIR) -I$(INCLUDES_DIR) -I$(FT_PRINTF_DIR) -I$(SRC_DIR) -Wall -Wextra -Werror -MMD -MP
+MAC_C_FLAGS = -O3 -I$(MLX_MAC_DIR) -I$(INCLUDES_DIR) -I$(FT_PRINTF_DIR) -I$(SRC_DIR) -Wall -Wextra -Werror -MMD -MP
 
-LFLAGS = -lmlx -framework OpenGL -framework AppKit
+# LFLAGS = -lmlx -framework OpenGL -framework AppKit
+LFLAGS = -lXext -lX11 -lm
 
 all:
 	mkdir -p $(OBJ_DIR)
 	make $(NAME)
 
-$(NAME): $(OBJ) $(LIBFTPRINTF)
-	cc $(C_FLAGS) $(OBJ) $(LIBFTPRINTF) $(LFLAGS) -o $(NAME)
+$(NAME): $(OBJ) $(MINILIBX) $(LIBFTPRINTF)
+	cc $(C_FLAGS) $(OBJ) $(MINILIBX) $(LIBFTPRINTF) $(LFLAGS) -o $(NAME)
+
+$(MAC): $(OBJ) $(MINILIBX) $(LIBFTPRINTF)
+	cc $(C_FLAGS) $(OBJ) $(MINILIBX) $(LIBFTPRINTF) $(LFLAGS) -o $(NAME)
+
+$(MINILIBX):
+	make -C $(MLX_DIR)
 
 $(LIBFTPRINTF):
 	make -C $(FT_PRINTF_DIR)
@@ -70,6 +82,7 @@ $(OBJ_DIR)/%.o:$(SRC_DIR)/%.c $(INCLUDES)
 
 clean:
 	make -C $(FT_PRINTF_DIR) clean
+	make -C $(MLX_DIR) clean
 	rm -rf $(OBJ_DIR)
 
 fclean: clean

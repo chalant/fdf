@@ -19,7 +19,7 @@
 # include "ft_printf.h"
 # include "get_next_line.h"
 # include "matrix.h"
-# include "mlx.h"
+# include <mlx.h>
 # include <fcntl.h>
 # include <math.h>
 
