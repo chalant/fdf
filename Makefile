@@ -93,4 +93,4 @@ bonus: all
 
 re: fclean all
 
-.PHONY: all clean fclean bonus re
+.PHONY: all clean fclean bonus
