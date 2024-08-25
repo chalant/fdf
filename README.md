@@ -20,7 +20,7 @@ git clone https://github.com/chalant/fdf.git
 ```
 sudo apt-get install libbsd-dev
 ```
-3. Build project
+3. **Build project:**
 ```
 make
 ```
