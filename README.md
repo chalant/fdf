@@ -11,7 +11,7 @@ Supports isometric projection and perspective projection.
 - **libbsd-dev**: Required for building the project on Linux
 
 ## Installation
-### On Linux
+### On Ubuntu
 1. **Clone repository:**
 ```
 git clone https://github.com/chalant/fdf.git
