@@ -45,7 +45,7 @@ make
 ./fdf test_maps/mars.fdf
 ```
 ## Commands
-| **Action**                         | **Windows/Linux Shortcut** | **Mac Shortcut**        |
+| **Action**                         | **Windows/Linux**          | **Mac**                 |
 |------------------------------------|----------------------------|-------------------------|
 | Toggle isometric/perspective       | `Ctrl + M`                 | `Cmd + M`               |
 | Move up, down, left, right         | `W, S, A, D`               | `W, S, A, D`            |
