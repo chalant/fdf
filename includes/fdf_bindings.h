@@ -42,9 +42,9 @@
 
 # ifdef __linux__
 
-# define TU 122
+# define TU 119
 # define TD 115
-# define TL 113
+# define TL 97
 # define TR 100
 
 # define RU 65362
