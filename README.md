@@ -3,6 +3,7 @@
 A simple rendering application for displaying height maps using wireframes.
 Supports isometric projection and perspective projection.
 ![Feature Screenshot](./docs/Screenshot_20240904_010628.png)
+![Feature Screenshot](./docs/Screenshot_20240904_081148.png)
 ## Table of Contents
 1. [Requirements](#installation)
 2. [Installation](#requirements)
