@@ -1,4 +1,5 @@
 # FDF
+Simple line based rendering engine
 ## Description
 A simple rendering application for displaying height maps using wireframes.
 Supports isometric projection and perspective projection.
