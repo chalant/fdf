@@ -48,7 +48,7 @@ make
 | **Action**                         | **Windows/Linux Shortcut** | **Mac Shortcut**        |
 |------------------------------------|----------------------------|-------------------------|
 | Toggle projection                  |                            |                         |
-| isometric/perspective              | `Ctrl + M`                 | `Cmd + M``              |
+| isometric/perspective              | `Ctrl + M`                 | `Cmd + M`              |
 | Move up, down, left, right         | `W, S, A, D`               | `W, S, A, D`            |
 | Zoom in/out                        | `+/-`                      | ``+/-``                 |
 | Rotate Up, Down, Left, Right       | `↑, ↓, ←, →`               | `↑, ↓, ←, →`            |
