@@ -62,6 +62,19 @@ int	fill_points(t_object *object, char *line, int x, int *z)
 	return (1);
 }
 
+int normalize_elevations(t_object *object)
+{
+	int k;
+
+	k = -1;
+	while (++k < object->body->cols)
+	{
+		object->body->points[2][k] = object->max_elevation * (object->body->points[2][k] - object->min_elevation) / (object->max_elevation - object->min_elevation);
+		object->elevations[k] = object->max_elevation * (object->elevations[k] - object->min_elevation) / (object->max_elevation - object->min_elevation);
+	}
+	return (1);
+}
+
 int	fill_map(char *file_path, t_object *object)
 {
 	char	*line;
@@ -87,6 +100,7 @@ int	fill_map(char *file_path, t_object *object)
 	if (line)
 		free(line);
 	object->height = x;
+	normalize_elevations(object);
 	close(fd);
 	return (1);
 }
