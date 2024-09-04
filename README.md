@@ -6,7 +6,8 @@ Supports isometric projection and perspective projection.
 ## Table of Contents
 1. [Requirements](#installation)
 2. [Installation](#requirements)
-4. [Usage](#usage)
+3. [Usage](#usage)
+4. [Commands](#commands)
 
 ## Requirements
 - **libbsd-dev**: Required for building the project on Linux
@@ -43,3 +44,17 @@ make
 ```
 ./fdf test_maps/mars.fdf
 ```
+## Commands
+| **Action**                         | **Windows/Linux Shortcut** | **Mac Shortcut**        |
+|------------------------------------|----------------------------|-------------------------|
+| Toggle projection                  |                            |                         |
+| isometric/perspective              | `Ctrl + M`                 | `Cmd + M``              |
+| Move up, down, left, right         | `W, S, A, D`               | `W, S, A, D`            |
+| Zoom in/out                        | `+/-`                      | ``+/-``                 |
+| Rotate Up, Down, Left, Right       | `↑, ↓, ←, →`               | `↑, ↓, ←, →`            |
+| Increase/Decrease Height           | `Shift + Ctrl + ↑/↓`       | `Shift + Cmd + ↑/↓`     |
+| Increase/Decrease Width            | `Shift + Ctrl + →/←`       | `Shift + Cmd + →/←`     |
+| Increase/Decrease Height           | `Ctrl + →/←`               | `Cmd + →/←`             |
+| Increase/Decrease Color separation | `Alt + ↑/↓`                | `Alt + ↑/↓`             |
+| Rotate colors                      | `Alt + →/←`                | `Alt + →/←`             |
+| Toggle height lightness on/off     | `Alt + L`                  | `Alt + L`               |
