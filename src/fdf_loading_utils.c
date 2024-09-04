@@ -69,8 +69,8 @@ int normalize_elevations(t_object *object)
 	k = -1;
 	while (++k < object->body->cols)
 	{
-		object->body->points[2][k] = object->max_elevation * (object->body->points[2][k] - object->min_elevation) / (object->max_elevation - object->min_elevation);
-		object->elevations[k] = object->max_elevation * (object->elevations[k] - object->min_elevation) / (object->max_elevation - object->min_elevation);
+		object->body->points[2][k] = fminf(object->max_elevation, 100.0f) * (object->body->points[2][k] - object->min_elevation) / (object->max_elevation - object->min_elevation);
+		object->elevations[k] = fminf(object->max_elevation, 100.0f) * (object->elevations[k] - object->min_elevation) / (object->max_elevation - object->min_elevation);
 	}
 	return (1);
 }
